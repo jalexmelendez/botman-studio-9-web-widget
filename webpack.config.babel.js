@@ -11,7 +11,8 @@ module.exports = {
 	context: path.resolve(__dirname, "src"),
     entry: {
         widget: './widget/index.tsx',
-        chat: './chat/index.tsx'
+        chat: './chat/index.tsx',
+		fullscreen: './fullscreen/index.tsx'
     },
 
 	output: {
@@ -119,7 +120,8 @@ module.exports = {
 		}),
         new CopyWebpackPlugin([
             { from: './chat.html', to: './../' },
-            { from: './demo.html', to: './../' }
+            { from: './demo.html', to: './../' },
+			{ from: './fullscreen.html', to: './../' }
         ])
 	]).concat(ENV==='production' ? [
 		new webpack.optimize.UglifyJsPlugin({

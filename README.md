@@ -1,5 +1,21 @@
 # BotMan Web Widget
 
+# Custom modifications
+
+You can find a fullscreen version of this, it makes the API accessible via window objects (window.chatInstance for the chat uu where you can execute instrucions to send messages to the bot, sat as bot, etc..)
+
+``` js
+window.chatInstance.sayAsBot('Hey dude!, helcome to Cut developments, how may i assist you?')
+ ```
+
+You have access to the botman instance where you can setup the hostname of the chatbot instance, here is an example used on the chatbot studio project used in rurusi.
+
+``` js 
+window.BotmanInstance.chatServer = "http://127.0.0.1:8000/api/botman" 
+```
+
+NOTE: you should always setup your chat server before using it, point it to the exposed route to your web driver, it is "/api/botman" on the updated botman studio.
+
 ## Install requirements
 
 ### Install nodejs
